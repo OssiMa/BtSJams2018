@@ -9,6 +9,7 @@ public class BasicEnemyAI : MonoBehaviour {
     public Vector2 Point2;
     bool GoToPoint2;
     public float Speed = 1;
+    public float GizmoPointSize = 0.2f;
 
 	void Start ()
     {
@@ -54,5 +55,11 @@ public class BasicEnemyAI : MonoBehaviour {
                 GoToPoint2 = true;
             }
         }
+    }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(Point1, GizmoPointSize);
+        Gizmos.DrawSphere(Point2, GizmoPointSize);
     }
 }

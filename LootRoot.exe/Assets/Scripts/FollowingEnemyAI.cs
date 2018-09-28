@@ -43,6 +43,10 @@ public class FollowingEnemyAI : MonoBehaviour {
         }
 
     }
-
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, followDistance);
+    }
 
 }
