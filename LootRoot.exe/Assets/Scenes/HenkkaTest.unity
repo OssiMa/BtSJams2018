@@ -194,6 +194,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1219685915977432, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: Point1.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: Speed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
   m_IsPrefabParent: 0
