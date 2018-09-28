@@ -10,7 +10,7 @@ public class BulletMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        speed = .1f;        
+        speed = .1f;
     }
 	
 	// Update is called once per frame
@@ -32,7 +32,5 @@ public class BulletMovement : MonoBehaviour {
         {
             transform.position -= transform.right * speed;
         }
-
-
     }
 }

@@ -10,8 +10,9 @@ public class Shooting : MonoBehaviour {
     public GameObject downBullet;
     public GameObject rightBullet;
     public GameObject leftBullet;
+    public GameObject godBullet;
 
-    public enum Direction { up, down, left, right };
+    public enum Direction { up, down, left, right, god };
     public Direction direction;
 
     GameObject spawnObject;
@@ -44,6 +45,10 @@ public class Shooting : MonoBehaviour {
             else if (direction == Direction.right)
             {
                 spawnObject = rightBullet;
+            }
+            else if (direction == Direction.god)
+            {
+                spawnObject = godBullet;
             }
 
             Instantiate(spawnObject);
