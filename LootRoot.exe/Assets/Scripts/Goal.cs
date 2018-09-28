@@ -6,10 +6,9 @@ public class Goal : MonoBehaviour {
 
     public Gamemanager2 gm;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        print("aaaaaaaaaaaaaa");
-        if(other.transform.tag == "Player")
+        if(other.tag == "Player")
         {
             gm.NextLevel();
         }
