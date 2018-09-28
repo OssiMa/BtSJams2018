@@ -209,7 +209,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4825081465476600, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1219685915977432, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_Name
@@ -228,12 +228,17 @@ Prefab:
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point1.x
-      value: -32
+      value: -32.94
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point2.x
-      value: -40
+      value: -38.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: GizmoPointSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
@@ -726,6 +731,11 @@ Prefab:
       propertyPath: Point2.x
       value: -32
       objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: GizmoPointSize
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
   m_IsPrefabParent: 0
@@ -801,7 +811,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4825081465476600, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4825081465476600, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -830,12 +840,12 @@ Prefab:
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point1.y
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point2.y
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
@@ -850,6 +860,11 @@ Prefab:
     - target: {fileID: 1219685915977432, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_Name
       value: Basic enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: GizmoPointSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
@@ -1408,12 +1423,12 @@ Prefab:
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point1.y
-      value: 6
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point2.y
-      value: 6
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
@@ -1424,6 +1439,11 @@ Prefab:
         type: 2}
       propertyPath: Point2.x
       value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: GizmoPointSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
@@ -1465,7 +1485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4869863572648616, guid: ac9f5d8d55827dc48b7b0f647624ab76, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114998668762029272, guid: ac9f5d8d55827dc48b7b0f647624ab76,
         type: 2}
@@ -2445,12 +2465,12 @@ Prefab:
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point1.y
-      value: 6
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point2.y
-      value: 6
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
@@ -2465,6 +2485,11 @@ Prefab:
     - target: {fileID: 1219685915977432, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_Name
       value: Basic enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: GizmoPointSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
@@ -2938,7 +2963,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4825081465476600, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4825081465476600, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2971,12 +2996,12 @@ Prefab:
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point1.y
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
       propertyPath: Point2.y
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
         type: 2}
@@ -2987,6 +3012,11 @@ Prefab:
         type: 2}
       propertyPath: Point2.x
       value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114246424653717920, guid: a64e0a6c870da574ba53df67130985b1,
+        type: 2}
+      propertyPath: GizmoPointSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a64e0a6c870da574ba53df67130985b1, type: 2}
