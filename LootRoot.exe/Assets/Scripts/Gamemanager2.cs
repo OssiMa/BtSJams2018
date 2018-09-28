@@ -29,7 +29,7 @@ public class Gamemanager2 : MonoBehaviour {
 
     }
 
-    void NextLevel()
+    public void NextLevel()
     {
         SceneManager.LoadScene("level"+currentLevel);
         currentLevel += 1;
