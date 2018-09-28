@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Ossitest.unity
+    guid: 4eb1821e712588d448afdc0ebf895412
+  - enabled: 1
+    path: Assets/Scenes/Levels/testi.unity
+    guid: 77c7148c05ddd4e44b11666dc9f0a689
   m_configObjects: {}
