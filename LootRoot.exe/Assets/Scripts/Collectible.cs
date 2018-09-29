@@ -8,7 +8,7 @@ public class Collectible : MonoBehaviour {
     float time;
     public float timeToPickup = 1;
 
-    float progress;
+    public float progress;
     public float hackAmount = 10;
 
     bool hacking = false;
