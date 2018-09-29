@@ -37,8 +37,7 @@ public class FollowingEnemyAI : MonoBehaviour {
     {
         if (collision.transform.tag == "Player")
         {
-            Destroy(collision.gameObject);
-            print("ok");
+            Player.GetComponent<ThePlayerMovement>().KillPlayer();
             //GameOver
         }
 
