@@ -24,7 +24,6 @@ public class DoorButton : MonoBehaviour {
     {
         if (Player != null && !hacked)
         {
-            print(Time.time);
             //print(Vector2.Distance(transform.position, Player.transform.position));
             if (Vector2.Distance(transform.position, Player.transform.position) < hackingDistance)
             {

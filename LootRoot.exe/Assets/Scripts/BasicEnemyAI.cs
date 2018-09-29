@@ -14,7 +14,6 @@ public class BasicEnemyAI : MonoBehaviour {
     void Start ()
     {
         gameObject.transform.position = Point1;
-
     }
 	
 	// Update is called once per frame
