@@ -7,7 +7,7 @@ public class ShootingAtPlayer : MonoBehaviour {
     GameObject player;
 
     float speed;
-    float deathTimer;
+    float flyLength;
 
     public bool homing;
     public bool explode;
@@ -18,6 +18,12 @@ public class ShootingAtPlayer : MonoBehaviour {
     public GameObject downBullet;
     public GameObject rightBullet;
     public GameObject leftBullet;
+
+    bool search;
+
+    Vector3 moveDirection;
+
+    float distance;
 
     // Use this for initialization
     void Start ()
@@ -33,9 +39,11 @@ public class ShootingAtPlayer : MonoBehaviour {
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-        deathTimer = 23;
+        flyLength = 23;
 
         targetPos = player.transform.position;
+
+        search = true;
     }
 
     // Update is called once per frame
@@ -43,18 +51,35 @@ public class ShootingAtPlayer : MonoBehaviour {
     {
         if (player != null)
         {
-            if (homing)
+            if (transform.position != targetPos && search == true)
             {
-                targetPos = player.transform.position;
+                if (homing)
+                {
+                    targetPos = player.transform.position;
+                }
+
+                transform.position = Vector3.MoveTowards(transform.position, (targetPos), speed);
+
+                moveDirection = targetPos - transform.position;
+                float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, (targetPos), speed);
+            distance = Vector2.Distance(targetPos, transform.position);
+
+            if (distance <= 1f)
+            {
+                search = false;
+            }
+
+            if (search == false)
+            {
+                transform.rotation = transform.rotation;
+
+                targetPos = transform.right;
+                transform.position = Vector3.MoveTowards(transform.position, (targetPos), -speed);
+            }
         }
-
-
-        Vector3 moveDirection = targetPos - transform.position;
-        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)      

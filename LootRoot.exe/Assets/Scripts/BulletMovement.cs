@@ -7,21 +7,21 @@ public class BulletMovement : MonoBehaviour {
     float speed;
     public GameObject shooting;
 
-    float deathTimer;
+    float flyLength;
 
     // Use this for initialization
     void Start()
     {
         speed = .1f;
-        deathTimer = 16;
+        flyLength = 16;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        deathTimer -= .1f;
+        flyLength -= .1f;
 
-        if (deathTimer <= 0)
+        if (flyLength <= 0)
         {
             Destroy(gameObject);
         }
