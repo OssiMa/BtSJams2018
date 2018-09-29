@@ -8,28 +8,44 @@ public class Collectible : MonoBehaviour {
     float time;
     public float timeToPickup = 1;
 
-    bool timer = false;
+    float progress;
+    public float hackAmount = 10;
+
+    bool hacking = false;
+
+    private void Start()
+    {
+        GameObject temp = GameObject.Find("Gamemanager2");
+        gm = temp.GetComponent<Gamemanager2>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            time = Time.time + timeToPickup;
-            timer = true;
-        }
+        hacking = true;
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            timer = false;
-        }
+        hacking = false;
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Stop();
     }
 
     private void Update()
     {
-        if (timer == true && Time.time >= time)
+
+        if (hacking == true)
+        {
+            if (Input.anyKeyDown)
+            {
+                progress += 1;
+            }
+        }
+
+        if(progress >= hackAmount)
         {
             gm.Looted();
             Destroy(gameObject);
