@@ -5,9 +5,9 @@ using UnityEngine;
 public class Shooting : MonoBehaviour {
 
     float timer;
-    float reset = 2;
-    float godReset = 5;
-    float shootingDistance = 30;
+    public float shootRate = 2;
+    public float godShootRate = 5;
+    public float shootingDistance = 30;
 
     public GameObject upBullet;
     public GameObject downBullet;
@@ -31,7 +31,7 @@ public class Shooting : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        timer = reset;
+        timer = shootRate;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 	
@@ -74,22 +74,22 @@ public class Shooting : MonoBehaviour {
                     else if (direction == Direction.god)
                     {
                         spawnObject = godBullet;
-                        reset = godReset;
+                        shootRate = godShootRate;
                     }
                     else if (direction == Direction.homingGod)
                     {
                         spawnObject = homingGodBullet;
-                        reset = godReset;
+                        shootRate = godShootRate;
                     }
                     else if (direction == Direction.explodingGod)
                     {
                         spawnObject = explodingGodBullet;
-                        reset = godReset;
+                        shootRate = godShootRate;
                     }
 
                     Instantiate(spawnObject);
                     spawnObject.transform.position = transform.position;
-                    timer = reset;
+                    timer = shootRate;
                     audioS.Play();
                 }
             }
