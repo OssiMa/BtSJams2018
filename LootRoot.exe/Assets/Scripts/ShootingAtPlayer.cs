@@ -37,9 +37,9 @@ public class ShootingAtPlayer : MonoBehaviour {
 
         targetPos = player.transform.position;
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         if (player != null)
         {
@@ -48,19 +48,16 @@ public class ShootingAtPlayer : MonoBehaviour {
                 targetPos = player.transform.position;
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed);
-
-            if (!homing)
-            {
-                if (transform.position == targetPos)
-                {
-                    MyEnd();
-                }
-            }
+            transform.position = Vector3.MoveTowards(transform.position, (targetPos), speed);
         }
-	}
 
-    private void OnCollisionEnter2D(Collision2D collision)      //Onko player trigger vai collision?
+
+        Vector3 moveDirection = targetPos - transform.position;
+        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)      
     {
         if (collision.gameObject.tag == "Player")
         {
