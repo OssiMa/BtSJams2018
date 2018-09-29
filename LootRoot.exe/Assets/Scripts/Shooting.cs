@@ -26,6 +26,8 @@ public class Shooting : MonoBehaviour {
 
     GameObject player;
 
+    public AudioSource audioS;
+
     // Use this for initialization
     void Start ()
     {
@@ -88,6 +90,7 @@ public class Shooting : MonoBehaviour {
                     Instantiate(spawnObject);
                     spawnObject.transform.position = transform.position;
                     timer = reset;
+                    audioS.Play();
                 }
             }
         }
