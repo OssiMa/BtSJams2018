@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4541247257555974}
   - component: {fileID: 212331964535306782}
   - component: {fileID: 114487798298903930}
-  - component: {fileID: 114000933489088192}
   m_Layer: 0
   m_Name: LeftBullet
   m_TagString: Untagged
@@ -42,17 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114000933489088192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1959023287144322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f983e315b7049a4a87321732a5f3613, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114487798298903930
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -179,6 +179,7 @@ MonoBehaviour:
   rightBullet: {fileID: 1959023287144322, guid: 5035b4957b0471148af05200ffb69d17,
     type: 2}
   leftBullet: {fileID: 1959023287144322, guid: 340d765d25f96484392fd3a4ac9388f8, type: 2}
+  godBullet: {fileID: 1959023287144322, guid: 8500a2edb178956458350327a14e08b8, type: 2}
   direction: 0
 --- !u!114 &114430275615299440
 MonoBehaviour:
@@ -196,6 +197,7 @@ MonoBehaviour:
   rightBullet: {fileID: 1959023287144322, guid: 5035b4957b0471148af05200ffb69d17,
     type: 2}
   leftBullet: {fileID: 1959023287144322, guid: 340d765d25f96484392fd3a4ac9388f8, type: 2}
+  godBullet: {fileID: 1959023287144322, guid: 8500a2edb178956458350327a14e08b8, type: 2}
   direction: 1
 --- !u!114 &114444231076906880
 MonoBehaviour:
@@ -213,6 +215,7 @@ MonoBehaviour:
   rightBullet: {fileID: 1959023287144322, guid: 5035b4957b0471148af05200ffb69d17,
     type: 2}
   leftBullet: {fileID: 1959023287144322, guid: 340d765d25f96484392fd3a4ac9388f8, type: 2}
+  godBullet: {fileID: 1959023287144322, guid: 8500a2edb178956458350327a14e08b8, type: 2}
   direction: 3
 --- !u!114 &114682290339633900
 MonoBehaviour:
@@ -230,6 +233,7 @@ MonoBehaviour:
   rightBullet: {fileID: 1959023287144322, guid: 5035b4957b0471148af05200ffb69d17,
     type: 2}
   leftBullet: {fileID: 1959023287144322, guid: 340d765d25f96484392fd3a4ac9388f8, type: 2}
+  godBullet: {fileID: 1959023287144322, guid: 8500a2edb178956458350327a14e08b8, type: 2}
   direction: 2
 --- !u!212 &212034253805193228
 SpriteRenderer:
