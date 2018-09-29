@@ -8,7 +8,6 @@ public class Gamemanager2 : MonoBehaviour {
 
     public static Gamemanager2 instance = null;
 
-    int triesLeft = 3;
     int score = 0;
 
     public int levels;
@@ -33,6 +32,11 @@ public class Gamemanager2 : MonoBehaviour {
     {
         SceneManager.LoadScene("level"+currentLevel);
         currentLevel += 1;
+    }
+
+    public void Looted()
+    {
+        score += 1;
     }
 
 }
