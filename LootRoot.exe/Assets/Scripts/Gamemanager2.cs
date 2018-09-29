@@ -21,10 +21,6 @@ public class Gamemanager2 : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            NextLevel();
-        }
 
     }
 
