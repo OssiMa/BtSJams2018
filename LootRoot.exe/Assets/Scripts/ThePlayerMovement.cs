@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ThePlayerMovement : MonoBehaviour {
     public float playerSpeed = 0.15f;
@@ -12,7 +13,6 @@ public class ThePlayerMovement : MonoBehaviour {
     {
 		if(Input.GetKey(KeyCode.D))
         {
-            print("afskjb");
             transform.Translate(Vector2.right * playerSpeed);
         }
         if (Input.GetKey(KeyCode.A))
@@ -27,5 +27,9 @@ public class ThePlayerMovement : MonoBehaviour {
         {
             transform.Translate(Vector2.down * playerSpeed);
         }
+    }
+    private void OnDestroy()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
