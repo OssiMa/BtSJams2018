@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour {
 
-    float speed;
+    public float speed;
     public GameObject shooting;
 
-    float flyLength;
+    public float flyLength;
 
     // Use this for initialization
     void Start()

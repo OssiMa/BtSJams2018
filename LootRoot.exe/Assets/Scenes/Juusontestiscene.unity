@@ -158,6 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4ab373694c2014c84ac9da3e8bba28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootRate: 2
+  godShootRate: 5
+  shootingDistance: 30
   upBullet: {fileID: 1959023287144322, guid: 3ef9605ed22a8fb408dbb60c51b6ef7b, type: 2}
   downBullet: {fileID: 1959023287144322, guid: 812964421df23ee45804dbac18420d15, type: 2}
   rightBullet: {fileID: 1959023287144322, guid: 5035b4957b0471148af05200ffb69d17,
@@ -359,7 +362,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e724f13a2adda3a4298d09bdaa8ce575,
+      objectReference: {fileID: 21300000, guid: ccc2a40cb42143e4da1661a8813731e1,
         type: 3}
     - target: {fileID: 212876729970836736, guid: eb7fa1ee72cdd194ca10c05c1bfd6958,
         type: 2}
@@ -424,6 +427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4ab373694c2014c84ac9da3e8bba28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootRate: 2
+  godShootRate: 5
+  shootingDistance: 30
   upBullet: {fileID: 1959023287144322, guid: 3ef9605ed22a8fb408dbb60c51b6ef7b, type: 2}
   downBullet: {fileID: 1959023287144322, guid: 812964421df23ee45804dbac18420d15, type: 2}
   rightBullet: {fileID: 1959023287144322, guid: 5035b4957b0471148af05200ffb69d17,
@@ -1104,6 +1110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4ab373694c2014c84ac9da3e8bba28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootRate: 2
+  godShootRate: 5
+  shootingDistance: 30
   upBullet: {fileID: 1959023287144322, guid: 3ef9605ed22a8fb408dbb60c51b6ef7b, type: 2}
   downBullet: {fileID: 1959023287144322, guid: 812964421df23ee45804dbac18420d15, type: 2}
   rightBullet: {fileID: 1959023287144322, guid: 5035b4957b0471148af05200ffb69d17,

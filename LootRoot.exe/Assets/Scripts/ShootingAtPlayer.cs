@@ -6,8 +6,8 @@ public class ShootingAtPlayer : MonoBehaviour {
 
     GameObject player;
 
-    float speed;
-    float flyLength;
+    public float speed;
+    public float flyLength;
 
     public bool homing;
     public bool explode;
