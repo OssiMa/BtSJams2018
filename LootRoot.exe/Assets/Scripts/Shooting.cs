@@ -5,60 +5,97 @@ using UnityEngine;
 public class Shooting : MonoBehaviour {
 
     float timer;
-    const float reset = 2;
+    float reset = 2;
+    float godReset = 5;
+    float shootingDistance = 30;
+
     public GameObject upBullet;
     public GameObject downBullet;
     public GameObject rightBullet;
     public GameObject leftBullet;
     public GameObject godBullet;
     public GameObject homingGodBullet;
+    public GameObject explodingGodBullet;
 
-    public enum Direction { up, down, left, right, god, homingGod };
+    public enum Direction { up, down, left, right, god, homingGod, explodingGod };
     public Direction direction;
 
     GameObject spawnObject;
+
+    bool follow;
+
+    GameObject player;
 
     // Use this for initialization
     void Start ()
     {
         timer = reset;
-	}
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        timer -= .1f;
-        
-        if (timer <= 0)
+        if (player != null)
         {
-            if (direction == Direction.up)
+            if (Vector2.Distance(transform.position, player.transform.position) < shootingDistance)
             {
-                spawnObject = upBullet;
+                follow = true;
             }
-            else if (direction == Direction.down)
+            else
             {
-                spawnObject = downBullet;
-            }
-            else if (direction == Direction.left)
-            {
-                spawnObject = leftBullet;
-            }
-            else if (direction == Direction.right)
-            {
-                spawnObject = rightBullet;
-            }
-            else if (direction == Direction.god)
-            {
-                spawnObject = godBullet;
-            }
-            else if (direction == Direction.homingGod)
-            {
-                spawnObject = homingGodBullet;
+                follow = false;
             }
 
-            Instantiate(spawnObject);
-            spawnObject.transform.position = transform.position;
-            timer = reset;
+            timer -= .1f;
+
+            if (follow == true)
+            {
+                if (timer <= 0)
+                {
+                    if (direction == Direction.up)
+                    {
+                        spawnObject = upBullet;
+                    }
+                    else if (direction == Direction.down)
+                    {
+                        spawnObject = downBullet;
+                    }
+                    else if (direction == Direction.left)
+                    {
+                        spawnObject = leftBullet;
+                    }
+                    else if (direction == Direction.right)
+                    {
+                        spawnObject = rightBullet;
+                    }
+                    else if (direction == Direction.god)
+                    {
+                        spawnObject = godBullet;
+                        reset = godReset;
+                    }
+                    else if (direction == Direction.homingGod)
+                    {
+                        spawnObject = homingGodBullet;
+                        reset = godReset;
+                    }
+                    else if (direction == Direction.explodingGod)
+                    {
+                        spawnObject = explodingGodBullet;
+                        reset = godReset;
+                    }
+
+                    Instantiate(spawnObject);
+                    spawnObject.transform.position = transform.position;
+                    timer = reset;
+                }
+            }
         }
-	}
+        }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, shootingDistance);
+    }
 }

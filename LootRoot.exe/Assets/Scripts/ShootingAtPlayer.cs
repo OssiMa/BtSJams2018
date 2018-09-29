@@ -10,24 +10,30 @@ public class ShootingAtPlayer : MonoBehaviour {
     float deathTimer;
 
     public bool homing;
+    public bool explode;
 
     Vector3 targetPos;
+
+    public GameObject upBullet;
+    public GameObject downBullet;
+    public GameObject rightBullet;
+    public GameObject leftBullet;
 
     // Use this for initialization
     void Start ()
     {
         if (homing)
         {
-            speed = .08f;
+            speed = 0.16f;
         }
         else
         {
-            speed = .06f;
+            speed = 0.4f;
         }
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-        deathTimer = 8;
+        deathTimer = 23;
 
         targetPos = player.transform.position;
     }
@@ -35,28 +41,21 @@ public class ShootingAtPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (homing)
+        if (player != null)
         {
-            deathTimer -= .1f;
-
-            if (deathTimer <= 0)
+            if (homing)
             {
-                Destroy(gameObject);
+                targetPos = player.transform.position;
             }
-        }
 
-        if(homing)
-        {
-            targetPos = player.transform.position;
-        }
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed);
 
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed);
-
-        if (!homing)
-        {
-            if (transform.position == targetPos)
+            if (!homing)
             {
-                Destroy(gameObject);
+                if (transform.position == targetPos)
+                {
+                    MyEnd();
+                }
             }
         }
 	}
@@ -66,11 +65,33 @@ public class ShootingAtPlayer : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+            MyEnd();
+        }
+        else if (collision.gameObject.tag == "Bullet")
+        {
+            //Höhöö
         }
         else
         {
-            Destroy(gameObject);
+            MyEnd();
         }
+    }
+
+    void MyEnd()
+    {
+        if (explode == true)
+        {
+            Instantiate(upBullet);
+            Instantiate(downBullet);
+            Instantiate(rightBullet);
+            Instantiate(leftBullet);
+
+            upBullet.transform.position = transform.position;
+            downBullet.transform.position = transform.position;
+            leftBullet.transform.position = transform.position;
+            rightBullet.transform.position = transform.position;
+        }
+
+        Destroy(gameObject);
     }
 }

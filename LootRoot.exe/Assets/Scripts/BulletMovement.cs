@@ -13,7 +13,7 @@ public class BulletMovement : MonoBehaviour {
     void Start()
     {
         speed = .1f;
-        deathTimer = 7;
+        deathTimer = 16;
     }
 	
 	// Update is called once per frame
@@ -26,6 +26,28 @@ public class BulletMovement : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        Move();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "Bullet")
+        {
+            //Höhöö
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Move()
+    {
         if (gameObject.name == "UpBullet(Clone)")
         {
             transform.position += transform.up * speed;
@@ -41,19 +63,6 @@ public class BulletMovement : MonoBehaviour {
         else if (gameObject.name == "LeftBullet(Clone)")
         {
             transform.position -= transform.right * speed;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 }
