@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Goal
   - Loot
+  - Bullet
   layers:
   - Default
   - TransparentFX
