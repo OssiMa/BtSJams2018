@@ -11,10 +11,11 @@ public class BasicEnemyAI : MonoBehaviour {
     public float Speed = 1;
     public float GizmoPointSize = 0.2f;
 
-	void Start ()
+    void Start ()
     {
         gameObject.transform.position = Point1;
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -41,8 +42,7 @@ public class BasicEnemyAI : MonoBehaviour {
     {
         if (collision.transform.tag == "Player")
         {
-            Destroy(collision.gameObject);
-            //GameOver
+            collision.gameObject.GetComponent<ThePlayerMovement>().KillPlayer();
         }
         else
         {

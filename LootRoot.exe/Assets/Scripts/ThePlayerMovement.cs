@@ -28,7 +28,8 @@ public class ThePlayerMovement : MonoBehaviour {
             transform.Translate(Vector2.down * playerSpeed);
         }
     }
-    private void OnDestroy()
+
+    public void KillPlayer()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

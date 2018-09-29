@@ -4,19 +4,61 @@ using UnityEngine;
 
 public class DoorButton : MonoBehaviour {
     public List<GameObject> doors = new List<GameObject>();
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public float hackingDistance;
+    GameObject Player;
+    public float hackingTime;
+    float hackedTime;
+    bool hacked = false;
+    Color baseColor;
+    Color endColor = Color.green;
+    SpriteRenderer spriteRenderer;
+    float T;
+    void Start()
     {
-        if(collision.transform.tag == "Player")
+        Player = GameObject.FindGameObjectWithTag("Player");
+        baseColor = gameObject.GetComponent<SpriteRenderer>().color;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
+    }
+
+    private void Update()
+    {
+        if (Player != null && !hacked)
         {
-            if (doors != null)
+
+            if (Vector2.Distance(transform.position, Player.transform.position) < hackingDistance)
             {
-                foreach(GameObject door in doors)
+                hackedTime += Time.deltaTime;
+                T = Time.time;
+                //Color.Lerp(baseColor, Color.green, Time.time*hackingTime);
+               // GetComponent<SpriteRenderer>().material.color = Color.Lerp(baseColor, Color.green, T);
+                spriteRenderer.color = Color.Lerp(baseColor, endColor, Mathf.PingPong(Time.time / hackingTime, 5.0f));
+
+                if (hackedTime > hackingTime)
                 {
-                    Destroy(door);
+                    hacked = true;
+                    if (doors != null)
+                    {
+                        foreach (GameObject door in doors)
+                        {
+                            Destroy(door);
+                        }
+                        //gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                    }
                 }
-                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+            }
+            else
+            {
+                hackedTime = 0;
+                T = 0;
+                gameObject.GetComponent<SpriteRenderer>().color = baseColor;
+
             }
         }
+    }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, hackingDistance);
     }
 }
