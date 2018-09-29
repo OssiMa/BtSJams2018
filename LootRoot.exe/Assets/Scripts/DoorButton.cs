@@ -12,7 +12,6 @@ public class DoorButton : MonoBehaviour {
     Color baseColor;
     Color endColor = Color.green;
     SpriteRenderer spriteRenderer;
-    float T;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -25,14 +24,13 @@ public class DoorButton : MonoBehaviour {
     {
         if (Player != null && !hacked)
         {
-
+            print(Time.time);
+            //print(Vector2.Distance(transform.position, Player.transform.position));
             if (Vector2.Distance(transform.position, Player.transform.position) < hackingDistance)
             {
+
                 hackedTime += Time.deltaTime;
-                T = Time.time;
-                //Color.Lerp(baseColor, Color.green, Time.time*hackingTime);
-               // GetComponent<SpriteRenderer>().material.color = Color.Lerp(baseColor, Color.green, T);
-                spriteRenderer.color = Color.Lerp(baseColor, endColor, Mathf.PingPong(Time.time / hackingTime, 5.0f));
+                spriteRenderer.color = Color.Lerp(baseColor, endColor, Mathf.PingPong(hackedTime / hackingTime, 5.0f));
 
                 if (hackedTime > hackingTime)
                 {
@@ -43,14 +41,13 @@ public class DoorButton : MonoBehaviour {
                         {
                             Destroy(door);
                         }
-                        //gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+
                     }
                 }
             }
             else
             {
                 hackedTime = 0;
-                T = 0;
                 gameObject.GetComponent<SpriteRenderer>().color = baseColor;
 
             }
