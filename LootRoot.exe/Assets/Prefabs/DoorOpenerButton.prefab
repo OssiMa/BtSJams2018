@@ -78,9 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be84301a7128f348b75ea5e5344e60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors: []
-  hackingDistance: 0
-  hackingTime: 0
+  doors:
+  - {fileID: 0}
+  hackingDistance: 3
+  hackingTime: 1
 --- !u!212 &212485387137289550
 SpriteRenderer:
   m_ObjectHideFlags: 1
