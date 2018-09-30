@@ -14,7 +14,7 @@ public class BulletMovement : MonoBehaviour {
     void Start()
     {
         speed = .1f;
-        flyLength = 16;
+        //flyLength = 16;
     }
 	
 	// Update is called once per frame

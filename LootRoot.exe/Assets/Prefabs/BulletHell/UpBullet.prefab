@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   shooting: {fileID: 0}
-  flyLength: 0
+  flyLength: 60
 --- !u!212 &212331964535306782
 SpriteRenderer:
   m_ObjectHideFlags: 1
