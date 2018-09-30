@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959023287144322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.713819, y: -10.1616125, z: 7.455349}
+  m_LocalPosition: {x: -14.029105, y: -2.7806327, z: 6.191928}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd0a5496e64d84488978970b2e06789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
   shooting: {fileID: 0}
+  flyLength: 0
 --- !u!212 &212331964535306782
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,7 +117,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f0d43bb52115e7b4b90b094f981f82c1, type: 3}
-  m_Color: {r: 0.9529412, g: 0.10980392, b: 0.10980392, a: 1}
+  m_Color: {r: 0.9529412, g: 0.3694593, b: 0.109803915, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
