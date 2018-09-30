@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BulletMovement : MonoBehaviour {
 
@@ -33,7 +34,7 @@ public class BulletMovement : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "Bullet")

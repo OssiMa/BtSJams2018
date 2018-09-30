@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShootingAtPlayer : MonoBehaviour {
 
@@ -86,7 +87,7 @@ public class ShootingAtPlayer : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             MyEnd();
         }
         else if (collision.gameObject.tag == "Bullet")

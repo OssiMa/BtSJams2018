@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Tonttu : MonoBehaviour {
 
     GameObject[] remaining;
-    float timer = 20;
+    float timer = 10;
 
     bool explode = true;
 
@@ -37,7 +37,7 @@ public class Tonttu : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
