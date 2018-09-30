@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f016c185da07444883a39f5ddd32932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 114752473134557868, guid: 9f90d5da27036b74f99ef5396d29da0d, type: 2}
+  gm: {fileID: 0}
 --- !u!212 &212684091304857008
 SpriteRenderer:
   m_ObjectHideFlags: 1
