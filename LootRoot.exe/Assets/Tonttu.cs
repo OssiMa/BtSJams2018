@@ -69,7 +69,7 @@ public class Tonttu : MonoBehaviour {
 
         if (timer <= 0)
         {
-            SceneManager.LoadScene("Mainmenu");
+            SceneManager.LoadScene("End");
         }
     }
 }
