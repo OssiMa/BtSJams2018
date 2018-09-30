@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4409559953365894}
   - component: {fileID: 212271126744902308}
   - component: {fileID: 50524278433670944}
-  - component: {fileID: 60293377471315406}
   - component: {fileID: 114449233126432886}
+  - component: {fileID: 60362624810527976}
   m_Layer: 0
   m_Name: Growing enemy
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1811189066578012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1, y: -2.06, z: -0}
+  m_LocalPosition: {x: -38.141426, y: 0.7112727, z: -0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &60293377471315406
+--- !u!60 &60362624810527976
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -77,9 +77,9 @@ PolygonCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 3.32, y: 3.14}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -87,12 +87,64 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.08, y: 0.08}
-      - {x: -0.08, y: -0.08}
-      - {x: 0.074999996, y: -0.08}
-      - {x: 0.08, y: -0.06}
-      - {x: 0.08, y: 0.07}
-      - {x: 0.055, y: 0.08}
+    - - {x: 0.14, y: -0.85999995}
+      - {x: 0.42, y: -1.12}
+      - {x: 0.57, y: -1.26}
+      - {x: 0.89, y: -1.5699999}
+      - {x: 1.06, y: -1.5699999}
+      - {x: 1.5, y: -1.4499999}
+      - {x: 1.5699999, y: -1.3399999}
+      - {x: 1.56, y: -1.29}
+      - {x: 1.5899999, y: -1.18}
+      - {x: 1.5999999, y: -1.14}
+      - {x: 1.65, y: -1}
+      - {x: 1.66, y: -0.94}
+      - {x: 1.66, y: -0.81}
+      - {x: 1.5999999, y: -0.76}
+      - {x: 1.02, y: -0.22}
+      - {x: 0.78999996, y: 0}
+      - {x: 0.96, y: 0.14}
+      - {x: 1.09, y: 0.28}
+      - {x: 1.39, y: 0.55}
+      - {x: 1.66, y: 0.81}
+      - {x: 1.66, y: 0.94}
+      - {x: 1.5799999, y: 1.26}
+      - {x: 1.51, y: 1.4399999}
+      - {x: 1.4399999, y: 1.4599999}
+      - {x: 1.18, y: 1.52}
+      - {x: 1.02, y: 1.5699999}
+      - {x: 0.90999997, y: 1.5699999}
+      - {x: 0.78, y: 1.4499999}
+      - {x: 0.64, y: 1.3199999}
+      - {x: 0.21, y: 0.91999996}
+      - {x: 0, y: 0.72999996}
+      - {x: -0.26, y: 0.98999995}
+      - {x: -0.56, y: 1.25}
+      - {x: -0.9, y: 1.5699999}
+      - {x: -1.02, y: 1.5699999}
+      - {x: -1.4699999, y: 1.4399999}
+      - {x: -1.52, y: 1.42}
+      - {x: -1.64, y: 0.96999997}
+      - {x: -1.66, y: 0.9}
+      - {x: -1.66, y: 0.81}
+      - {x: -1.4499999, y: 0.61}
+      - {x: -1.16, y: 0.35}
+      - {x: -1.01, y: 0.21}
+      - {x: -0.87, y: 0.08}
+      - {x: -0.81, y: -0.02}
+      - {x: -1.09, y: -0.28}
+      - {x: -1.51, y: -0.68}
+      - {x: -1.66, y: -0.83}
+      - {x: -1.66, y: -0.90999997}
+      - {x: -1.54, y: -1.35}
+      - {x: -1.53, y: -1.42}
+      - {x: -1.43, y: -1.4699999}
+      - {x: -1.23, y: -1.51}
+      - {x: -1.01, y: -1.5699999}
+      - {x: -0.9, y: -1.5699999}
+      - {x: -0.76, y: -1.4499999}
+      - {x: -0.48, y: -1.1899999}
+      - {x: 0.01, y: -0.72999996}
 --- !u!114 &114449233126432886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,10 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a856c52de11ede34fa9977cac35d0b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSize: {x: 1, y: 1, z: 0}
-  maxSize: {x: 10, y: 10, z: 0}
-  growSpeed: 0.5
-  changeTime: 3
+  minSize: {x: 3, y: 3, z: 0}
+  maxSize: {x: 4.5, y: 4.5, z: 0}
+  growSpeed: 2
+  changeTime: 2
 --- !u!212 &212271126744902308
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -143,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 5e9d3ce07b964b843886c329cb2acf52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
