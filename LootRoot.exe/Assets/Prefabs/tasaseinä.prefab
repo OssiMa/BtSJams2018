@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61096579587215724}
   m_Layer: 0
   m_Name: "tasasein\xE4"
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 4.13, y: 5.49}
-  m_EdgeRadius: 0.1
+  m_EdgeRadius: 0
 --- !u!212 &212580363447956008
 SpriteRenderer:
   m_ObjectHideFlags: 1
