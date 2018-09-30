@@ -8,6 +8,12 @@ public class Goal : MonoBehaviour {
     GameObject[] remaining;
 
 
+    private void Start()
+    {
+        GameObject temp = GameObject.Find("Gamemanager2");
+        gm = temp.GetComponent<Gamemanager2>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         CheckRemainingCollectibles();
