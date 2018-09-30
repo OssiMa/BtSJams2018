@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959023287144322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 8.87, z: 2.94}
+  m_LocalPosition: {x: 1.78, y: 5.27, z: 2.94}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7d0fc13566f794994c0d5a013981d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  flyLength: 0
   homing: 1
   explode: 1
   upBullet: {fileID: 1959023287144322, guid: 3ef9605ed22a8fb408dbb60c51b6ef7b, type: 2}
