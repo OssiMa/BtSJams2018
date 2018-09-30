@@ -21,9 +21,12 @@ public class Collectible : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hacking = true;
-        AudioSource audio = GetComponent<AudioSource>();
-        audio.Play();
+        if (collision.tag == "Player")
+        {
+            hacking = true;
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+        }
     }
 
 
