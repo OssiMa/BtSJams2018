@@ -12,11 +12,13 @@ public class DoorButton : MonoBehaviour {
     Color baseColor;
     Color endColor = Color.green;
     SpriteRenderer spriteRenderer;
+    AudioSource audioS;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         baseColor = gameObject.GetComponent<SpriteRenderer>().color;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioS = GetComponent<AudioSource>();
         
     }
 
@@ -40,7 +42,7 @@ public class DoorButton : MonoBehaviour {
                         {
                             Destroy(door);
                         }
-
+                        audioS.Play();
                     }
                 }
             }

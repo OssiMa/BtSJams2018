@@ -15,6 +15,7 @@ public class Gamemanager2 : MonoBehaviour {
 
     private void Awake()
     {
+        levels = 1;
         DontDestroyOnLoad(gameObject);
         
     }
@@ -26,8 +27,8 @@ public class Gamemanager2 : MonoBehaviour {
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("level"+currentLevel);
         currentLevel += 1;
+        SceneManager.LoadScene("level"+currentLevel);
     }
 
     public void Looted()

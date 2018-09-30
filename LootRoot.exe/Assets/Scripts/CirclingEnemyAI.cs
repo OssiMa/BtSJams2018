@@ -50,6 +50,15 @@ public class CirclingEnemyAI : MonoBehaviour
                     currentCirclingDirection = CirclingDirection.Clockwise;
                     break;
             }
+            switch (currentMovingDirection)
+            {
+                case MovingDirection.Forward:
+                    currentMovingDirection = MovingDirection.BackWard;
+                    break;
+                case MovingDirection.BackWard:
+                    currentMovingDirection = MovingDirection.Forward;
+                    break;
+            }
 
         }
     }
